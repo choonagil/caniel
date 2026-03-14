@@ -12,17 +12,18 @@ html {
 body {
     background: #f3f6fa;
     color: #1f2933;
+    overflow: hidden;
 }
 
 header {
     background: linear-gradient(135deg, #0b5fa4, #118ab2);
     color: white;
-    padding: 18px 28px;
+    padding: 14px 28px;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.18);
 }
 
 .header-inner {
-    max-width: 1200px;
+    width: 100%;
     margin: 0 auto;
     display: flex;
     align-items: center;
@@ -36,14 +37,14 @@ header {
 }
 
 .header-title h1 {
-    font-size: 32px;
+    font-size: 28px;
     line-height: 1.3;
     font-weight: 700;
 }
 
 .logo-box {
     background: #ffffff;
-    padding: 10px 16px;
+    padding: 8px 14px;
     border-radius: 14px;
     box-shadow: 0 4px 14px rgba(0, 0, 0, 0.14);
     display: flex;
@@ -52,19 +53,20 @@ header {
 }
 
 .logo-large {
-    height: 72px;
+    height: 60px;
     width: auto;
     object-fit: contain;
     display: block;
 }
 
 .bulletin-board {
-    max-width: 1200px;
-    margin: 28px auto;
+    width: 100%;
+    margin: 20px auto;
     padding: 0 20px;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 28px;
+    gap: 24px;
+    height: calc(100vh - 120px);
 }
 
 .complaint-card {
@@ -73,25 +75,28 @@ header {
     border-radius: 16px;
     overflow: hidden;
     box-shadow: 0 6px 20px rgba(15, 23, 42, 0.10);
+    display: flex;
+    flex-direction: column;
 }
 
 .complaint-img {
     width: 100%;
-    height: 320px;
+    flex: 1;
     object-fit: contain;
     background: #ffffff;
     display: block;
     border-bottom: 1px solid #e5e7eb;
+    max-height: 55vh;
 }
 
 .complaint-details {
-    padding: 20px 22px 24px;
+    padding: 16px 20px 20px;
 }
 
 .complaint-details p {
-    font-size: 24px;
-    line-height: 1.7;
-    margin-bottom: 10px;
+    font-size: 22px;
+    line-height: 1.6;
+    margin-bottom: 8px;
 }
 
 .complaint-details strong {
@@ -101,38 +106,7 @@ header {
 .complaint-desc {
     background: #f8fbff;
     border-right: 5px solid #0b5fa4;
-    padding: 12px 14px;
+    padding: 10px 14px;
     border-radius: 8px;
-    margin-top: 12px;
-}
-
-@media (max-width: 900px) {
-    .bulletin-board {
-        grid-template-columns: 1fr;
-    }
-
-    .header-inner {
-        flex-direction: column;
-        text-align: center;
-    }
-
-    .header-title {
-        text-align: center;
-    }
-
-    .header-title h1 {
-        font-size: 26px;
-    }
-
-    .logo-large {
-        height: 62px;
-    }
-
-    .complaint-details p {
-        font-size: 20px;
-    }
-
-    .complaint-img {
-        height: 260px;
-    }
+    margin-top: 10px;
 }
