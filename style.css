@@ -7,12 +7,14 @@
 html {
     direction: rtl;
     font-family: Arial, sans-serif;
+    min-width: 1024px;
 }
 
 body {
     background: #f3f6fa;
     color: #1f2933;
     overflow: hidden;
+    min-width: 1024px;
 }
 
 header {
@@ -24,7 +26,6 @@ header {
 
 .header-inner {
     width: 100%;
-    margin: 0 auto;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -63,8 +64,8 @@ header {
     width: 100%;
     margin: 20px auto;
     padding: 0 20px;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+    display: grid !important;
+    grid-template-columns: 1fr 1fr !important;
     gap: 24px;
     height: calc(100vh - 120px);
 }
