@@ -54,6 +54,7 @@ header {
     width: auto;
     object-fit: contain;
     display: block;
+    mix-blend-mode: screen;
 }
 
 .bulletin-board {
